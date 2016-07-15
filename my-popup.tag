@@ -10,7 +10,7 @@
       if (href.indexOf("https://youtu.be/") == 0)
         return href.replace("https://youtu.be/", "https://www.youtube.com/embed/");
       else if (href.indexOf("https://www.youtube.com/watch?v=") == 0)
-        return href.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/");
+        return href.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/") + '?autoplay=1';
       return null;
     }
     this.src = getYoutubeEmbed(this.opts.properties["動画"]);
